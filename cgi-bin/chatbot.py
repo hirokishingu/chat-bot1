@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 import cgi
 from botengine import make_reply
+import sys
+import io
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 form = cgi.FieldStorage()
 
@@ -18,10 +22,10 @@ def api_say():
     print(res)
 
 def show_form():
-    print("Content-Type: text/html; charset=utf-8")
+    print("Content-Type: text/html; charset=UTF-8")
     print("")
     print("""
-        <html><meta charset="utf-8"><body>
+        <html><meta charset="UTF-8"><body>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <style>
             h1 { background-color: #ffe0e0; }
