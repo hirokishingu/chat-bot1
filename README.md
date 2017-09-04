@@ -1,6 +1,6 @@
 # chat-bot1
 
-## HOW TO
+### HOW TO
 
 #### go to cgi-bin directry
 
